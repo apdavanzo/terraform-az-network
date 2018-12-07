@@ -1,5 +1,9 @@
 # Configure the Azure Provider
-provider "azurerm" {}
+provider "azurerm" {
+  client_id = "${client_id}"
+  client_secret = "${client_secret}"
+  tenant_id = "${tenant_id}"
+ }
 
 # Create a resource group
 resource "azurerm_resource_group" "network" {
