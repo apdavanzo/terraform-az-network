@@ -15,7 +15,7 @@ resource "azurerm_virtual_network" "network" {
   resource_group_name = "${azurerm_resource_group.network.name}"
 
   subnet {
-    name           = "arbitrary-change-subnet1"
+    name           = "test-subnet1"
     address_prefix = "10.0.1.0/24"
   }
 
@@ -27,5 +27,9 @@ resource "azurerm_virtual_network" "network" {
   subnet {
     name           = "test-subnet3"
     address_prefix = "10.0.3.0/24"
+  }
+  subnet {
+    name           = "test-subnet4"
+    address_prefix = "10.0.4.0/24"
   }
 }
